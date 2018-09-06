@@ -1,0 +1,1723 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+@import url(https://fonts.googleapis.com/earlyaccess/sawarabimincho.css);
+
+/* CSS Document */
+
+.hoge {
+	color: #FFF;
+}
+
+/* リセット
+---------------------------------------------------- */
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 100%;
+}
+
+fieldset,
+img {
+	border: 0;
+	vertical-align: top;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+small {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before,
+q:after {
+	content: '';
+}
+
+abbr,
+acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+br {
+	letter-spacing: normal;
+}
+
+/* to preserve line-height and selector appearance */
+
+sup {
+	vertical-align: text-top;
+}
+
+sub {
+	vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/*to enable resizing for IE*/
+
+input,
+textarea,
+select {
+	*font-size: 100%;
+}
+
+/* ページ共通
+---------------------------------------------------- */
+
+html {
+	color: #000;
+	font-size: 10px;
+	letter-spacing: 0.05em;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font: 10px/1.4 "游明朝体", "Yu Mincho", YuMincho, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ ゴシック", sans-serif;
+}
+
+*:first-child + html body {
+	font-size: 87%;
+}
+
+hr {
+	border: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.clearfix:after {
+	content: "."; /* 新しい要素を作る */
+	display: block; /* ブロックレベル要素に */
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	min-height: 1px;
+}
+
+* html .clearfix {
+	height: 1px; /*\*/ /*/
+  height: auto;
+  overflow: hidden;
+  /**/
+}
+
+.clear {
+	clear: both;
+}
+
+.none {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+
+#cbox2Overlay {
+	opacity: 0.8 !important;
+}
+
+#colorbox,
+#cbox2Overlay,
+#cbox2Wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	overflow: hidden;
+}
+
+#cbox2Overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+#cbox2MiddleLeft,
+#cbox2BottomLeft {
+	clear: left;
+}
+
+#cbox2Content {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+
+#cbox2LoadedContent {
+	overflow: auto;
+}
+
+#cbox2LoadedContent iframe {
+	display: block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+#cbox2Title {
+	margin: 0;
+}
+
+#cbox2LoadingOverlay,
+#cbox2LoadingGraphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+#cbox2Previous,
+#cbox2Next,
+#cbox2Close,
+#cbox2Slideshow {
+	cursor: pointer;
+}
+
+/* 
+    Example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+
+#cbox2Overlay {
+	background: black url(//deagostini.jp/site/common/overlay.png) 0 0 repeat;
+}
+
+#cbox2TopLeft {
+	width: 21px;
+	height: 21px;
+	background: none -100px 0 no-repeat;
+}
+
+#cbox2TopRight {
+	width: 21px;
+	height: 21px;
+	background: none -129px 0 no-repeat;
+}
+
+#cbox2BottomLeft {
+	width: 21px;
+	height: 21px;
+	background: none -100px -29px no-repeat;
+}
+
+#cbox2BottomRight {
+	width: 21px;
+	height: 21px;
+	background: none -129px -29px no-repeat;
+}
+
+#cbox2MiddleLeft {
+	width: 21px;
+	background: none left top repeat-y;
+}
+
+#cbox2MiddleRight {
+	width: 21px;
+	background: none right top repeat-y;
+}
+
+#cbox2TopCenter {
+	height: 21px;
+	background: none 0 0 repeat-x;
+}
+
+#cbox2BottomCenter {
+	height: 21px;
+	background: none 0 -29px repeat-x;
+}
+
+/* #cbox2Content{background:;}*/
+
+#cbox2LoadedContent {
+	margin-bottom: 28px;
+	padding: 30px 60px 0px;
+}
+
+#cbox2Title {
+	position: absolute;
+	top: 636px;
+	left: 60px;
+	text-align: left;
+	width: 860px;
+	font-size: 14px;
+	color: #FFF;
+	font-weight: bold;
+	text-shadow: 1px 1px 3px #000;
+}
+
+#cbox2Current {
+	position: absolute;
+	top: 10px;
+	left: 60px;
+	color: #FFFFFF;
+}
+
+#cbox2Slideshow {
+	position: absolute;
+	bottom: 3px;
+	right: 30px;
+	color: #FFFFFF;
+}
+
+#cbox2Previous {
+	left: 10px;
+	transform: rotate(-135deg);
+}
+
+#cbox2Next {
+	right: 10px;
+	transform: rotate(45deg);
+}
+
+#cbox2LoadingOverlay {
+	background: url(//deagostini.jp/site/common/loading_background.png) center center no-repeat;
+}
+
+#cbox2LoadingGraphic {
+	background: url(//deagostini.jp/site/common/loading.gif) center center no-repeat;
+}
+
+#cbox2Close {
+	position: absolute;
+	bottom: 11px;
+	right: 60px;
+	background: url(../images/colorbox_close.png);
+	background-position: left 4px;
+	background-repeat: no-repeat;
+	width: 87px;
+	height: 32px;
+	text-indent: -9999px;
+	border: 0px;
+	border-radius: 5px;
+}
+
+/*
+    The following fixes png-transparency for IE6.  
+    It is also necessary for png-transparency in IE7 & IE8 to avoid 'black halos' with the fade transition
+    
+    Since this method does not support CSS background-positioning, it is incompatible with CSS sprites.
+    Colorbox preloads navigation hover classes to account for this.
+    
+    !! Important Note: AlphaImageLoader src paths are relative to the HTML document,
+    while regular CSS background images are relative to the CSS document.
+*/
+
+#cbox2Previous,
+#cbox2Next {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: none;
+	width: 40px;
+	height: 40px;
+	margin: auto;
+	padding: 0;
+	text-indent: -9999px;
+	border-style: solid;
+	border-width: 8px 8px 0 0;
+	border-color: #fff #fff transparent transparent;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	z-index: 10000;
+}
+
+#cbox2Previous:hover,
+#cbox2Next:hover {
+	opacity: 0.7;
+}
+
+/* Slider */
+
+.slick-slider {
+	position: relative;
+	display: block;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+	-khtml-user-select: none;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.slick-list:focus {
+	outline: none;
+}
+
+.slick-list.dragging {
+	cursor: pointer;
+	cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+}
+
+.slick-track:before,
+.slick-track:after {
+	display: table;
+	content: '';
+}
+
+.slick-track:after {
+	clear: both;
+}
+
+.slick-loading .slick-track {
+	visibility: hidden;
+}
+
+.slick-slide {
+	display: none;
+	float: left;
+	height: 100%;
+	min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+	float: right;
+}
+
+.slick-slide img {
+	display: block;
+}
+
+.slick-slide.slick-loading img {
+	display: none;
+}
+
+.slick-slide.dragging img {
+	pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+	display: block;
+}
+
+.slick-loading .slick-slide {
+	visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+	display: block;
+	height: auto;
+	border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+	display: none;
+}
+
+/* Slider */
+
+/* Icons */
+
+@font-face {
+	font-family: 'slick';
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Arrows */
+
+.slick-prev,
+.slick-next {
+	font-size: 0;
+	line-height: 0;
+	position: absolute;
+	top: 50%;
+	display: block;
+	width: 20px;
+	height: 20px;
+	padding: 0;
+	margin-top: -10px\9; /*lte IE 8*/
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	cursor: pointer;
+	color: transparent;
+	border: none;
+	outline: none;
+	background: transparent;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+	color: transparent;
+	outline: none;
+	background: transparent;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+	opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+	opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	font-family: 'slick';
+	font-size: 20px;
+	line-height: 1;
+	opacity: .75;
+	color: white;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+	left: -25px;
+}
+
+[dir='rtl'] .slick-prev {
+	right: -25px;
+	left: auto;
+}
+
+.slick-prev:before {
+	content: '';
+}
+
+[dir='rtl'] .slick-prev:before {
+	content: '';
+}
+
+.slick-next {
+	right: -25px;
+}
+
+[dir='rtl'] .slick-next {
+	right: auto;
+	left: -25px;
+}
+
+.slick-next:before {
+	content: '';
+}
+
+[dir='rtl'] .slick-next:before {
+	content: '';
+}
+
+/* Dots */
+
+.slick-slider {
+	margin-bottom: 30px;
+}
+
+.slick-dots {
+	display: block;
+	position: absolute;
+	bottom: -45px;
+	width: 100%;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	text-align: center;
+}
+
+.slick-dots li {
+	display: inline-block;
+	position: relative;
+	width: 20px;
+	height: 20px;
+	margin: 0 5px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.slick-dots li button {
+	font-size: 0;
+	line-height: 0;
+	display: none;
+	width: 20px;
+	height: 20px;
+	padding: 5px;
+	cursor: pointer;
+	color: transparent;
+	border: 0;
+	outline: none;
+	background: transparent;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+	outline: none;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+	opacity: 1;
+}
+
+.slick-dots li button:before {
+	font-family: 'slick';
+	font-size: 6px;
+	line-height: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	content: '•';
+	text-align: center;
+	opacity: .25;
+	color: black;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+	opacity: .75;
+	color: black;
+}
+
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.animated2 {
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.animated3 {
+	-webkit-animation-duration: 3s;
+	animation-duration: 3s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.animated4 {
+	-webkit-animation-duration: 4s;
+	animation-duration: 4s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.animated.infinite {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+.animated2.infinite {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+.animated3.infinite {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+}
+
+.animated4.infinite {
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-goog-ms-animation-timing-function: linear;
+}
+
+.animated.hinge {
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+}
+
+.animated.bounceIn,
+.animated.bounceOut {
+	-webkit-animation-duration: .75s;
+	animation-duration: .75s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY {
+	-webkit-animation-duration: .75s;
+	animation-duration: .75s;
+}
+
+.bounce {
+	-webkit-animation-name: bounce;
+	animation-name: bounce;
+	-webkit-transform-origin: center bottom;
+	transform-origin: center bottom;
+}
+
+.flash {
+	-webkit-animation-name: flash;
+	animation-name: flash;
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+.pulse {
+	-webkit-animation-name: pulse;
+	animation-name: pulse;
+}
+
+/*--------------------------------------
+ レイアウト
+---------------------------------------*/
+
+body {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.header {
+	background-color: #f00;
+	height: 200px;
+	padding: 50px;
+}
+
+.container {
+	background-color: #0f0;
+	height: 800px;
+	padding: 50px;
+}
+
+.footer {
+	background-color: #00f;
+	height: 500px;
+	padding: 50px;
+}
+
+/*--------------------------------------
+ 要素
+---------------------------------------*/
+
+img {
+	max-width: 100%;
+}
+
+input[type="text"],
+select,
+textarea {
+	color: #333;
+	box-sizing: border-box;
+}
+
+input[type="text"],
+textarea {
+	width: 100%;
+	padding: 0.5em 0.7em;
+	border: 1px solid #ccc;
+}
+
+select {
+	padding: 0.5em 0.7em;
+}
+
+/*--------------------------------------
+ パーツ
+---------------------------------------*/
+
+/* インナー */
+
+.inner {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.inner.sz2 {
+	max-width: 1000px;
+}
+
+.inner.sz3 {
+	max-width: 800px;
+}
+
+/* タイトル */
+
+.ttl1 {
+	margin-bottom: 45px;
+	font-size: 3.5rem;
+	line-height: 1;
+	text-align: center;
+}
+
+.ttl1:before {
+	content: "";
+	display: block;
+	background-color: #358f31;
+	width: 93px;
+	height: 5px;
+	margin: 0 auto 1em;
+}
+
+.ttl1 em {
+	display: block;
+	margin-bottom: 15px;
+	color: #3bab3e;
+	font-family: "Noto Sans Japanese";
+	font-size: 1.7rem;
+}
+
+.ttl2 {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.ttl2 > div {
+	display: inline-block;
+	font-size: 5.0rem;
+}
+
+.ttl2 > div span {
+	display: block;
+	margin-bottom: 0.2em;
+	padding-bottom: 0.12em;
+	border-bottom: 1px solid #bdbdbd;
+}
+
+.ttl2 > div small {
+	display: block;
+	color: #bdbdbd;
+	font-size: 0.56em;
+}
+
+/* テキスト */
+
+.lead1 {
+	margin-bottom: 50px;
+	font-family: "Noto Sans Japanese";
+	font-size: 1.6rem;
+}
+
+/* テキスト色 */
+
+.txRed {
+	color: red;
+}
+
+/* 背景色 */
+
+.bgGrey1 {
+	background-color: #f0f0f0;
+}
+
+.bgMainColor {
+	background-color: #358f31;
+}
+
+/* ボタン */
+
+.btn {
+	display: inline-block;
+	background-color: #FFF;
+	padding: 10px 17px;
+	border: 1px solid #CCC;
+	color: #333;
+	font-family: "Noto Sans Japanese";
+	box-shadow: 0 3px 0 #CCC;
+	border-radius: 4px;
+	box-sizing: border-box;
+	transition: 0.3s;
+}
+
+.btn:hover {
+	opacity: 0.7;
+	text-decoration: none;
+}
+
+.btn.withIcn {
+	display: flex;
+	align-items: center;
+}
+
+.btn.clr2 {
+	background-color: #499745;
+	color: #fff;
+	border: none;
+	box-shadow: none;
+}
+
+.btn.clr3 {
+	background-color: #aaa;
+	color: #fff;
+	border: none;
+	box-shadow: none;
+}
+
+.btn.sz2 {
+	padding: 1em;
+	font-size: 2.1rem;
+}
+
+.btn.sz3 {
+	padding: 1em 3em;
+	font-size: 1.8rem;
+}
+
+.btn.withArwR {
+	padding-right: 2em;
+	padding-left: 2em;
+	position: relative;
+}
+
+.btn.withArwR:after {
+	content: "";
+	display: inline-block;
+	width: 0.6em;
+	height: 0.6em;
+	margin: auto;
+	border-style: solid;
+	border-width: 1px 1px 0 0;
+	border-color: #fff inherit transparent transparent;
+	box-sizing: border-box;
+	transform: rotate(45deg);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 1em;
+}
+
+/* スクロールボタン */
+
+.pageScrl {
+	display: flex;
+	justify-content: center;
+}
+
+.pageScrl .clkScrl {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	color: #358f31;
+	font-family: "Noto Sans Japanese";
+	border: 1px solid #358f31;
+	border-radius: 50px;
+	transition: 0.3s;
+}
+
+.pageScrl .clkScrl:before {
+	content: "";
+	display: inline-block;
+	content: "";
+	display: inline-block;
+	width: 0.6em;
+	height: 0.6em;
+	margin: -0.2em 0.5em 0 0;
+	border-style: solid;
+	border-width: 0.2em 0.2em 0 0;
+	border-color: #358f31 #358f31 transparent transparent;
+	box-sizing: border-box;
+	transform: rotate(135deg);
+	transition: inherit;
+}
+
+.pageScrl .clkScrl:hover {
+	background-color: #358f31;
+	color: #fff;
+	text-decoration: none;
+}
+
+.pageScrl .clkScrl:hover:before {
+	border-color: #fff #fff transparent transparent;
+}
+
+.pageScrl.type2 {
+	text-align: center;
+}
+
+.pageScrl.type2 .clkScrl {
+	background-color: transparent;
+	margin: 0 0.7em;
+	text-decoration: underline;
+	border: none;
+	border-radius: 0;
+}
+
+.pageScrl.type2 .clkScrl:before {
+	content: normal;
+}
+
+.pageScrl.type2 .clkScrl:hover {
+	color: #358f31;
+	text-decoration: none;
+}
+
+/* アイコン */
+
+.icnMail {
+	color: #358f31;
+}
+
+.icnMail:before {
+	display: none;
+	font-family: "Font Awesome 5 Solid";
+	content: "";
+}
+
+.icnMail svg {
+	margin-right: 7px;
+	color: inherit;
+}
+
+/* 注釈 */
+
+.note1 {
+	display: block;
+	text-indent: -1em;
+	padding-left: 1em;
+}
+
+/* リスト */
+
+.noteList1 > li {
+	text-indent: -1em;
+	padding-left: 1em;
+}
+
+.numList1 > li {
+	text-indent: -2.65em;
+	padding-left: 2.65em;
+}
+
+/* テーブル */
+
+.tblBox1 {
+	background: #FFF;
+	margin: 0 auto 50px;
+	padding: 30px 50px;
+	box-sizing: border-box;
+}
+
+.tblBox1 .tblCap {
+	font-size: 2.3rem;
+	border-bottom: 2px solid #499745;
+	margin: 0 0 10px;
+	padding: 0 0 10px;
+	font-weight: 600;
+}
+
+.tblBox1 table {
+	width: 100%;
+	font-size: 1.6rem;
+	line-height: 1.8;
+	font-family: "Noto Sans Japanese";
+}
+
+.tblBox1 tr:last-child td,
+.tblBox1 tr:last-child th {
+	border: none;
+}
+
+.tblBox1 th,
+.tblBox1 td {
+	padding: 8px 0;
+	border-bottom: 1px dotted #CCC;
+}
+
+.tblBox1.noBd th,
+.tblBox1.noBd td {
+	border-bottom: none;
+}
+
+.tblBox1 th {
+	width: 20%;
+}
+
+.tblBox1 td {
+	padding-left: 10px;
+}
+
+.tblBox1 .btnWrap {
+	padding: 20px 0;
+	text-align: center;
+	border-top: 1px dotted #CCC;
+}
+
+.tblBox1.noBd .btnWrap {
+	border-top: none;
+}
+
+/* ライン */
+
+.lines {
+	display: flex;
+	height: 5px;
+	font-size: 0;
+}
+
+.lines hr {
+	display: block;
+	width: 20%;
+	height: 100%;
+}
+
+.lines hr:nth-child(1) {
+	background-color: #358f31;
+}
+
+.lines hr:nth-child(2) {
+	background-color: #65bf2e;
+}
+
+.lines hr:nth-child(3) {
+	background-color: #3bab3e;
+}
+
+.lines hr:nth-child(4) {
+	background-color: #bfb62e;
+}
+
+.lines hr:nth-child(5) {
+	background-color: #17ba6f;
+}
+
+/* 画像 */
+
+.circleImg {
+	padding-top: 100%;
+	font-size: 0;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+}
+
+.circleImg .imgWrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.circleImg .imgWrap img {
+	max-width: none;
+	height: 100%;
+}
+
+/* リンク集 */
+
+.links1 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 45px 0 35px;
+}
+
+.links1 li {
+	background-color: #fff;
+	margin-bottom: 30px;
+	width: 47.9%;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.links1 li > * {
+	display: block;
+}
+
+.links1 li > * dt {
+	overflow: hidden;
+}
+
+.links1 li > * dd {
+	padding: 20px 30px;
+}
+
+.links1 li > * dd strong {
+	display: block;
+	color: #358f31;
+	font-size: 2.0rem;
+	line-height: 1.8;
+}
+
+.links1 li > * dd p {
+	font-family: "Noto Sans Japanese";
+	font-size: 1.6rem;
+}
+
+.links1 li > a img {
+	transition: 0.3s;
+}
+
+.links1 li > a:hover {
+	text-decoration: none;
+}
+
+.links1 li > a:hover img {
+	transform: scale(1.1);
+}
+
+/* 箱 */
+
+.accBtn {
+	cursor: pointer;
+}
+
+/* フォーム */
+
+.error_messe {
+	margin: 5px 0;
+	color: red;
+}
+
+/* 状態 */
+
+.dis_flex_block {
+	display: flex;
+}
+
+/*--------------------------------------
+ プラグイン
+---------------------------------------*/
+
+/* Slick */
+
+.slick-slider {
+	margin-bottom: 0;
+}
+
+.slick-dots li {
+	background-color: #8c8c8c;
+	width: 15px;
+	height: 15px;
+	margin: 0 7.5px;
+	border-radius: 50%;
+}
+
+.slick-dots li.slick-active {
+	background-color: #4b972b;
+}
+
+.modalBox {
+	display: none;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.modalBox .modalInner {
+	width: 600px;
+	position: absolute;
+	left: 50%;
+	margin-left: -300px;
+	top: 20%;
+	text-align: center;
+}
+
+.modalBox .modalInner p {
+	text-align: left;
+	padding: 20px 0;
+	font-size: 1.5rem;
+	font-family: "Noto Sans Japanese";
+}
+
+.modalBox .btnClose {
+	display: inline-block;
+	font-size: 1.5rem;
+	background: #333;
+	padding: 5px;
+	color: #FFF;
+}
+
+/*--------------------------------------
+  トップページ
+---------------------------------------*/
+
+.hge {
+	color: #CCC;
+}
+
+body {
+	opacity: 0.5;
+}
+
+@media screen and (max-width: 767px) {
+
+html {
+	font-size: 3.125vw;
+}
+
+body {
+	-webkit-text-size-adjust: 100%;
+	font-family: "Sawarabi Mincho";
+}
+
+body {
+	font-size: 20px;
+}
+
+.header {
+	height: 150px;
+}
+
+.container {
+	height: 150px;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.inner {
+	padding-left: 4.6875%;
+	padding-right: 4.6875%;
+}
+
+.ttl1 {
+	margin-bottom: 6.25vw;
+	font-size: 1.75rem;
+}
+
+.ttl1 > em {
+	margin-bottom: 2.34375vw;
+	font-size: 0.85rem;
+}
+
+.ttl2 {
+	margin-bottom: 4.375vw;
+}
+
+.ttl2 > div {
+	font-size: 2.6rem;
+}
+
+.ttl2 > div small {
+	font-size: 0.69231em;
+}
+
+.btn.sz2 {
+	font-size: 1.6rem;
+}
+
+.btn.sz3 {
+	font-size: 1.6rem;
+}
+
+.btn.withArwR {
+	display: block;
+}
+
+.btn.withArwR:after {
+	right: 1em;
+}
+
+.tblBox1 {
+	margin-bottom: 5%;
+	padding: 5% 5%;
+}
+
+.tblBox1 .tblCap {
+	font-size: 1.8rem;
+	margin-bottom: 0;
+	padding-bottom: 0.5em;
+}
+
+.tblBox1 table {
+	display: block;
+	width: auto;
+	font-size: 1.4rem;
+	line-height: 1.8;
+	font-family: "Noto Sans Japanese";
+}
+
+.tblBox1 tbody,
+.tblBox1 tr,
+.tblBox1 th,
+.tblBox1 td {
+	display: block;
+}
+
+.tblBox1 th {
+	width: auto;
+	padding: 2.5vw 0 0.9375vw;
+	font-weight: bold;
+	border-bottom: none;
+}
+
+.tblBox1 td {
+	padding: 0 0 2.5vw;
+	font-size: 1.2rem;
+}
+
+.tblBox1 .btnWrap {
+	padding: 4.6875vw 0 0;
+}
+
+.lines {
+	height: 0.78125vw;
+}
+
+.links1 {
+	display: block;
+	padding: 10% 0 4%;
+}
+
+.links1 li {
+	margin-bottom: 5%;
+	width: auto;
+}
+
+.links1 li > * dt img {
+	width: 100%;
+}
+
+.links1 li > * dd {
+	padding: 4% 5% 6%;
+}
+
+.links1 li > * dd strong {
+	font-size: 1.6rem;
+	line-height: 1.8;
+}
+
+.links1 li > * dd p {
+	font-size: 1.2rem;
+}
+
+.links1 li > a img {
+	transition: 0.3s;
+}
+
+.links1 li > a:hover {
+	text-decoration: none;
+}
+
+.links1 li > a:hover img {
+	transform: scale(1.1);
+}
+
+.selectWrap {
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	position: relative;
+}
+
+.selectWrap:before {
+	content: "";
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin: auto;
+	border-style: solid;
+	border-width: 0.5em 0.25em 0 0.25em;
+	border-color: #666 transparent transparent;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 5%;
+}
+
+.selectWrap select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+	border: none;
+}
+
+.dis_flex_block {
+	display: block;
+}
+
+.slick-dots li {
+	width: 2.34375vw;
+	height: 2.34375vw;
+	margin: 0 1.17188vw;
+}
+
+.modalBox .modalInner {
+	width: 90%;
+}
+
+}
+
+@keyframes rotation1 {
+
+0% {
+	transform: rotate(0deg) matrix(1, 0, 0, 1, 0, 0);
+}
+
+50% {
+	transform: rotate(180deg) matrix(1, 0.1, 0, 1, 0, 0);
+}
+
+100% {
+	transform: rotate(360deg) matrix(1, 0, 0, 1, 0, 0);
+}
+
+}
+
+@keyframes rotation2 {
+
+0% {
+	transform: rotate(0deg) matrix(1, 0, 0, 1, 0, 0);
+}
+
+50% {
+	transform: rotate(180deg) matrix(1, 0.1, 0, 1, 0, 0);
+}
+
+100% {
+	transform: rotate(360deg) matrix(1, 0, 0, 1, 0, 0);
+}
+
+}
+
+@-webkit-keyframes bounce {
+
+0%,20%,53%,80%,100% {
+	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+40%,43% {
+	-webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	-webkit-transform: translate3d(0, -30px, 0);
+	transform: translate3d(0, -30px, 0);
+}
+
+70% {
+	-webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	-webkit-transform: translate3d(0, -15px, 0);
+	transform: translate3d(0, -15px, 0);
+}
+
+90% {
+	-webkit-transform: translate3d(0, -4px, 0);
+	transform: translate3d(0, -4px, 0);
+}
+
+}
+
+@keyframes bounce {
+
+0%,20%,53%,80%,100% {
+	-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+40%,43% {
+	-webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	-webkit-transform: translate3d(0, -30px, 0);
+	transform: translate3d(0, -30px, 0);
+}
+
+70% {
+	-webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+	-webkit-transform: translate3d(0, -15px, 0);
+	transform: translate3d(0, -15px, 0);
+}
+
+90% {
+	-webkit-transform: translate3d(0, -4px, 0);
+	transform: translate3d(0, -4px, 0);
+}
+
+}
+
+@-webkit-keyframes flash {
+
+0%,50%,100% {
+	opacity: 1;
+}
+
+25%,75% {
+	opacity: 0;
+}
+
+}
+
+@keyframes flash {
+
+0%,50%,100% {
+	opacity: 1;
+}
+
+25%,75% {
+	opacity: 0;
+}
+
+}
+
+@-webkit-keyframes pulse {
+
+0% {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+}
+
+50% {
+	-webkit-transform: scale3d(1.25, 1.25, 1.25);
+	transform: scale3d(1.25, 1.25, 1.25);
+}
+
+100% {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+}
+
+}
+
+@keyframes pulse {
+
+0% {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+}
+
+50% {
+	-webkit-transform: scale3d(1.25, 1.25, 1.25);
+	transform: scale3d(1.25, 1.25, 1.25);
+}
+
+100% {
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+}
+
+}
+

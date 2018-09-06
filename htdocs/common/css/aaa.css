@@ -1,0 +1,42 @@
+/* CSS Document */
+
+body {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.header {
+	background-color: #f00;
+	height: 200px;
+	padding: 50px;
+}
+
+.container {
+	background-color: #0f0;
+	height: 800px;
+	padding: 50px;
+}
+
+.footer {
+	background-color: #00f;
+	height: 500px;
+	padding: 50px;
+}
+
+@media screen and (max-width: 767px) {
+
+body {
+	font-size: 20px;
+}
+
+.header {
+	height: 150px;
+}
+
+.container {
+	height: 150px;
+}
+
+}
+
